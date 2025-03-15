@@ -48,9 +48,7 @@ try:
     from dotenv import load_dotenv
     load_dotenv()
 except ModuleNotFoundError:
-    print("⚠️ Warning: python-dotenv module not found. Skipping 
-environment loading.")
-
+    print("⚠️ Warning: python-dotenv module not found. Skipping environment loading.")
 
 app = FastAPI()
 
