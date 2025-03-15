@@ -51,6 +51,7 @@ except ModuleNotFoundError:
     print("⚠️ Warning: python-dotenv module not found. Skipping 
 environment loading.")
 
+
 app = FastAPI()
 
 @app.get("/")
