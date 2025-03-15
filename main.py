@@ -13,10 +13,10 @@ def horse_trainer_agent(user_input):
     AI-powered horse trainer that provides advice to students.
     """
     system_message = (
-    "You are an experienced horse trainer specializing in reining, 
-dressage, and horsemanship. "
-    "Provide clear and actionable training advice for riders of all 
-levels. "
+    """You are an experienced horse trainer specializing in reining, 
+dressage, and horsemanship. """
+    """Provide clear and actionable training advice for riders of all 
+levels. """
     "Ensure responses are practical, safe, and easy to understand."
 )
 
