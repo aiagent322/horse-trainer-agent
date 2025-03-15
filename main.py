@@ -40,5 +40,31 @@ if __name__ == "__main__":
             break
         response = horse_trainer_agent(user_query)
         print("Horse Trainer AI:", response)
+from fastapi import FastAPI
+import os
+
+# Load environment variables (if using dotenv)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ModuleNotFoundError:
+    print("⚠️ Warning: python-dotenv module not found. Skipping 
+environment loading.")
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Horse Trainer AI is live!"}
+
+# Debugging: Print working directory and files to verify correct 
+deployment
+print("✅ Current Working Directory:", os.getcwd())
+print("📂 Files in directory:", os.listdir(os.getcwd()))
+
+# Ensure the app runs on Render's expected port
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 10000)))
 
 
